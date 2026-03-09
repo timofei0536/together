@@ -1,0 +1,29 @@
+{
+  "name": "next-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "bash dev.sh",
+    "build": "next build && node scripts/fix-html-void-slash.js",
+    "start": "next start",
+    "lint": "eslint",
+    "icons": "svgr public/images/svg -d src/components/icons --icon --replace-attr-values \"#fff=currentColor,#000=currentColor,white=currentColor,black=currentColor\" && node scripts/fix-svg-ids.js"
+  },
+  "dependencies": {
+    "next": "16.1.6",
+    "normalize.css": "^8.0.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "sass": "^1.97.3",
+    "swiper": "^12.1.2"
+  },
+  "devDependencies": {
+    "@svgr/cli": "^8.1.0",
+    "autoprefixer": "^10.4.27",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "open": "^11.0.0",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^3.4.19"
+  }
+}
